@@ -1,0 +1,121 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.contact-us-container {
+    width: 100%;
+}
+
+.contact-us {
+    max-width: 1200px;
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.contact-method {
+    flex: 1 1 300px;
+    background: #f9f9f9;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.contact-method:hover {
+    transform: translateY(-10px);
+}
+
+.contact-method img {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.contact-method h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.contact-method p {
+    color: #555;
+}
+
+.contact-method form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-method label {
+    margin: 10px 0 5px 0;
+    color: #555;
+}
+
+.contact-method input,
+.contact-method textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-method button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-method button:hover {
+    background: #0056b3;
+}
+
+.contact-method a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-method a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+}

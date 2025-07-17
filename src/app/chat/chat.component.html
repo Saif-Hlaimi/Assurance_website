@@ -1,0 +1,36 @@
+<div class="chat-icon" *ngIf="!chatOpen" (click)="toggleChat()">
+  <img src="img/chatbot.png" alt="Chat Icon">
+</div>
+
+<div class="chat-container" [ngClass]="{'visible': chatOpen}">
+  <header class="chat-header">
+    <h4>Chatbot</h4>
+    <button class="close-btn" (click)="toggleChat()">×</button>
+  </header>
+
+  <main class="chat-history" #chatHistory>
+    <div *ngFor="let item of chatHistoryArray" [ngClass]="{'user-message': item.from === 'user', 'bot-message': item.from === 'bot'}">
+      <p>{{ item.message }}</p>
+    </div>
+  </main>
+
+  <button id="toggle-suggestions-button" (click)="toggleSuggestions()">
+    {{ showSuggestions ? 'Masquer les suggestions' : 'Afficher les suggestions' }}
+  </button>
+
+  <section class="chat-suggestions" [ngClass]="{'visible': showSuggestions}">
+    <p>Suggestions:</p>
+    <div class="suggestions">
+      <button *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion)">{{ suggestion }}</button>
+    </div>
+  </section>
+
+  <footer class="chat-input">
+    <input type="text" id="message-input" placeholder="Type your message here..." [(ngModel)]="prompt" (keyup.enter)="sendData()" />
+    <button id="send-button" (click)="sendData()">Send</button>
+  </footer>
+
+  <div class="loading-spinner" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+</div>

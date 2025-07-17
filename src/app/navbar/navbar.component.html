@@ -1,0 +1,70 @@
+<!-- Topbar and Navbar Container Start -->
+
+<div class="topbar-navbar-container">
+      <!-- Topbar Start -->
+        <div class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-7 px-5 text-start">
+                    <div class="h-100 d-inline-flex align-items-center me-4">
+                        <small class="fa fa-phone-alt me-2"></small>
+                        <small>+216 70 020 300</small>
+                    </div>
+                    <div class="h-100 d-inline-flex align-items-center me-4">
+                        <small class="far fa-envelope-open me-2"></small>
+                        <small>mae.assurances&#64;mae.tn</small>
+                    </div>
+                    <div class="h-100 d-inline-flex align-items-center me-4">
+                        <small class="far fa-clock me-2"></small>
+                        <small>lundi - Venredi : 08 AM - 05 PM</small>
+                    </div>
+                </div>
+                <div class="col-lg-5 px-5 text-end">
+                    <div class="h-100 d-inline-flex align-items-center">
+                        <a class="text-white-50 ms-4" href="https://www.facebook.com/profile.php?id=100080057751170" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-white-50 ms-4" href="https://www.linkedin.com/company/mae-assurance/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="text-white-50 ms-4" href="https://www.instagram.com/maeassurances/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+                <h1 class="m-0"><img class="img-fluid me-3" src="img/icon/mae_newlogo.png" alt="" />Assurance</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+                    <a href="/particulier" class="nav-item nav-link">Particulier</a>
+                    <a href="/proffesionnel-entreprise" class="nav-item nav-link">Professionnels/Entreprise</a>
+                    <a href="/association-corporation" class="nav-item nav-link">Association/Corporation</a>
+                          <!-- Dropdown Start -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Plus
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/trouver-agence">Trouver une agence</a></li>
+                    <li><a class="dropdown-item" href="/reclamation">Réclamation</a></li>
+                    <li><a class="dropdown-item" href="/sinistre">Sinistre</a></li>
+                  <li><a class="dropdown-item" href="/devis">Devis</a></li>
+                </ul>
+            </li>
+            <!-- Dropdown End -->
+                  <a href="/about" class="nav-item nav-link">D'aprés nous</a>
+                  <a href="/contact" class="nav-item nav-link">Contact Us</a>
+                  <a *ngIf="!isLoggedIn" href="/login" class="nav-item nav-link">Se connecter</a>
+                  <a *ngIf="isLoggedIn" href="/profil" class="nav-item nav-link">Voir mon profil</a>
+                  <a *ngIf="isLoggedIn" (click)="logout()" class="nav-item nav-link" style="cursor: pointer;">Logout</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    </div>
+    <!-- Topbar and Navbar Container End -->
+    <script src="js/main.js"></script>
+    <script src="../public/js/main.js"></script>

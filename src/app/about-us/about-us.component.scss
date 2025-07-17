@@ -1,0 +1,49 @@
+.directeur{
+   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   //make it 20% right and 20% left specing
+   margin: 0 20%;
+
+}
+
+/* Ensure all images are responsive */
+img.responsive-image {
+   border-radius: 35px;
+    width: 80%;
+    height: auto;
+   //center the image
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      
+}
+
+/* Flexbox for the text pairs */
+.text-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-container .text {
+    flex: 1 1 45%;
+    margin: 10px;
+    background-color: rgb(216, 227, 216);
+    padding: 10px;
+      border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    /* Stack the text vertically on small screens */
+    .text-container .text {
+        flex: 1 1 100%;
+    }
+}
+
+.strategies-list li {
+   background-color: #e3f2fd;
+   margin: 10px 0;
+   padding: 15px;
+   border-radius: 5px;
+}

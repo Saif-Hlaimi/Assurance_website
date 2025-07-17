@@ -1,0 +1,50 @@
+<div class="signup-container">
+  <h1>Inscription</h1>
+  <form class="signup-form" #f="ngForm" (ngSubmit)="onSignup(f)">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="utilisateur.email" required>
+    </div>
+    <div class="form-group">
+      <label for="numTel">Numéro de téléphone</label>
+      <input type="tel" id="numTel" name="numTel" [(ngModel)]="utilisateur.numeroTelephone" required>
+    </div>
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="utilisateur.nom" required>
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" [(ngModel)]="utilisateur.prenom" required>
+    </div>
+    <div class="form-group">
+      <label for="adresse">Adresse</label>
+      <input type="text" id="adresse" name="adresse" [(ngModel)]="utilisateur.adresse">
+    </div>
+    <div class="form-group">
+      <label for="dateNaissance">Date de naissance</label>
+      <input type="date" id="dateNaissance" name="dateNaissance" [(ngModel)]="utilisateur.dateNaissance" required>
+    </div>
+    <div class="form-group">
+      <label for="etatCivil">État civil</label>
+      <select id="etatCivil" name="etatCivil" [(ngModel)]="utilisateur.etatCivil" required>
+        <option value="celibataire">Célibataire</option>
+        <option value="marie">Marié(e)</option>
+        <option value="divorce">Divorcé(e)</option>
+        <option value="veuf_veuve">Veuf/Veuve</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sexe">Sexe</label>
+      <select id="sexe" name="sexe" [(ngModel)]="utilisateur.sexe" required>
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="motDePasse">Mot de passe</label>
+      <input type="password" id="motDePasse" name="motDePasse" [(ngModel)]="utilisateur.motDePasse" required>
+    </div>
+    <button type="submit" class="btn">S'inscrire</button>
+  </form>
+</div>

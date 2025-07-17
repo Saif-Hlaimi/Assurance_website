@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Adresses MAE Assurance TN par Gouvernorat</h1>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Rechercher une agence..."
+      (input)="onSearch($event)"
+    />
+  </div>
+
+  <div class="gouvernorat" *ngFor="let gouvernorat of gouvernorats">
+    <h2>{{ gouvernorat.nom }}</h2>
+    <div *ngFor="let agency of gouvernorat.agencies" class="agency">
+      <h3>{{ agency.nom }}</h3>
+      <p>Adresse :{{ agency.adresse }}</p>
+      <p>Tél : {{ agency.tel }}</p>
+      <p>Email: {{ agency.email }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="devis-container">
+  <div class="devis-box">
+    <h2>Demander un Devis</h2>
+    <form (ngSubmit)="onSubmit(devisForm)" #devisForm="ngForm">
+      <div class="input-box">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" ngModel required>
+      </div>
+      <div class="input-box">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" ngModel required>
+      </div>
+      <div class="input-box">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel required>
+      </div>
+      <div class="input-box">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" ngModel required>
+      </div>
+      <div class="input-box">
+        <label for="type-assurance">Type d'Assurance</label>
+        <select id="type-assurance" name="typeAssurance" ngModel required>
+          <option value="" disabled selected>Choisissez un type d'assurance</option>
+          <option *ngFor="let assurance of assurances" [value]="assurance.assuranceId">{{ assurance.typeAssurance }}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Obtenir devis</button>
+    </form>
+  </div>
+</div>
